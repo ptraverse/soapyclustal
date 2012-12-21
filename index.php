@@ -16,6 +16,17 @@ echo 'NW';
 echo '</h2>';
 echo '</a>';
 
+echo '<a href="/needleman-wunsch/soapyclustal.php">';
+echo '<h2>';
+echo 'soapyclustalW';
+echo '</h2>';
+echo '</a>';
+
+echo '<a href="/needleman-wunsch/iprscan_web_php_soap.php">';
+echo '<h2>';
+echo 'iprscan_web_php_soap.php';
+echo '</h2>';
+echo '</a>';
 
 $contents = ob_get_contents();
 ob_end_clean();
