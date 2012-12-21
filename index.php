@@ -10,7 +10,7 @@
 echo "helloworld in PHP!";
 ob_start();
 
-echo '<a href="/needleman-wunsch/index.php">';
+echo '<a href="/needleman-wunsch/example.php">';
 echo '<h2>';
 echo 'NW';
 echo '</h2>';
