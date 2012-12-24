@@ -7,7 +7,9 @@ Everything should be available from index.php.
 
 -Lives on github and on ubuntu server virtual machine on LAN desktop
 
--Page of output of ClustalW Soap Service from http://www.ebi.ac.uk
+-ClustalW Soap Service from http://www.ebi.ac.uk Demo Output
+
+-Page of documentation of available databases for Soap Service from ebi.ac.uk
 
 -Page with simple form for ClustalW Soap Service
 
