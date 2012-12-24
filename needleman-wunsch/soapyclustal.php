@@ -9,6 +9,21 @@ try {
   // Call a method on the service via the proxy
   $result = $proxy->fetchData('UNIPROT:ADH1A_HUMAN', 'fasta', 'raw');
   echo $result;
+  echo "<hr>";
+  $result = $proxy->__getFunctions();
+  echo "<pre>";
+  print_r($result);
+  echo "</pre>";
+  $result = $proxy->fetchData('UNIPROT:ACUK_AJECN','fasta','raw');
+  echo "<hr><pre>";
+  print_r($result);
+  echo "</pre>";
+
+  $result = $proxy->__getFormats();
+  echo "<hr><pre>";
+  print_r($result);
+  echo "</pre>";
+  
 }
 catch(SoapFault $ex) {
   echo 'Error: ';
