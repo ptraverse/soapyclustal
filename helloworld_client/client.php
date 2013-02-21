@@ -2,11 +2,31 @@
 try{
   $sClient = new SoapClient('http://localhost/new_soapy/helloworld_server/hello.xml');
   
-  $params = "World!";
+  
+  
+  echo "<h1>Input</h1>";
+  
+  if (empty($_GET['yourName']))
+  {
+  		$params = "World";
+  }
+  else
+  {
+  		$params = $_GET['yourName'];
+  }
   $response = $sClient->doHello($params);
   
+  echo '<form action="client.php">';
+  echo 'yourName: <input placeholder="'.$params.'" name="yourName" type="text">';
+  echo '<input type="submit" value="Submit">';
+  
+  echo "<hr>";
+  echo "<h1>Output</h1>";
+  echo "<pre>";
   var_dump($response);
-  echo $response;
+  echo "</pre>";
+  echo "<hr>";
+   
   
 } catch(SoapFault $e){
 	echo __FILE__.":".__LINE__;

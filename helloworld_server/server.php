@@ -15,7 +15,7 @@ $server = new SoapServer("http://localhost/new_soapy/helloworld_server/hello.xml
 function doHello($yourName)
 {
 	echo __FILE__.":".__LINE__;
-	return "Hello, ".$yourName;
+	return "Hello, ".$yourName."!";
 }
 
 $server->AddFunction("doHello");
