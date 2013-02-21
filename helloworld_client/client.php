@@ -1,14 +1,15 @@
 <?php
 try{
-  $sClient = new SoapClient('http://localhost/soapyclustal_new/helloworld_sever/server.xml');
+  $sClient = new SoapClient('http://localhost/new_soapy/helloworld_server/hello.xml');
   
-  $params = "Aqila";
+  $params = "World!";
   $response = $sClient->doHello($params);
   
   var_dump($response);
-  
+  echo $response;
   
 } catch(SoapFault $e){
+	echo __FILE__.":".__LINE__;
   var_dump($e);
 }
 ?>

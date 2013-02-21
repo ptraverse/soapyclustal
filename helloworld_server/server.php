@@ -10,10 +10,11 @@ if(!extension_loaded("soap"))
 }
 
 ini_set("soap.wsdl_cache_enabled","0");
-$server = new SoapServer("hello.wsdl");
+$server = new SoapServer("http://localhost/new_soapy/helloworld_server/hello.xml");
 
 function doHello($yourName)
 {
+	echo __FILE__.":".__LINE__;
 	return "Hello, ".$yourName;
 }
 
