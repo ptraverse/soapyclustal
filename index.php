@@ -25,6 +25,7 @@ Hi, my name is Philippe Traverse.
 <p><a href="grid.php">grid</a></p>
 <p><a href="spec_template.php">spec template</a></p>
 <hr>
+<p><a href="/new_soapy/helloworld_client/client.php">helloworld soap</a></p>
 <?php
 
 //echo "helloworld in PHP!";
