@@ -17,10 +17,17 @@ while ($row = mysql_fetch_assoc($get_res))
 	$data[] = $row;
 }
 */
-$ed1 = array("Name"=>"HelloWorld","Language"=>"php","Spec"=>"link","Source"=>"link");
+$ed1 = array(
+	"Name"=>"HelloWorld",
+	"Language"=>"php",
+	"Spec"=>'<a href="new_soapy/helloworld_client/client.php">Link</a>',
+	"Source"=>'<a href="new_soapy/spec/helloworld.php">Link</a>');
 $ed2 = array("Name"=>"NW","Language"=>"php","Spec"=>"link","Source"=>"link");
 $ed3 = array("Name"=>"Viterbi","Language"=>"c#","Spec"=>"link","Source"=>"link");
 $example_data = array($ed1, $ed2, $ed3);
+
+
+
 
 echo '<div style="width: 400px; text-align: center; margin-left:auto; margin-right: auto;margin-top: 76px;">';
 echo array_to_html_grid($example_data);
