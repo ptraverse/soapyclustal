@@ -27,6 +27,7 @@ Hi, my name is Philippe Traverse.
 <hr>
 <?php
 
+require_once('functions.php');
 //echo "helloworld in PHP!";
 ob_start();
 
@@ -85,6 +86,13 @@ echo '</a>';
 $contents = ob_get_contents();
 ob_end_clean();
 echo $contents;
+
+echo __FILE__.":".__LINE__."<br>";
+
+if (log_ip()!=TRUE)
+{
+	echo '<pre>log_ip() error!</pre>';
+}
 
 
 ?>

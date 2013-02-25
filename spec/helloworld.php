@@ -15,6 +15,13 @@ echo '<body>';
  * END STANDARD STUFF
  */
 
+//Title
+echo '<div id="title"><h1>Hello, World!';
+echo '</h1>';
+echo '<sub><a href="../helloworld_client/client.php">example</a></sub>';
+echo '</div>';
+echo '<hr>';
+
 //SOAP
 echo "<h1>SOAP Client</h1>";
 echo '<div>';
@@ -48,16 +55,17 @@ $response = "Hello, World!";
 var_dump($response);
 echo '</pre>';
 echo '</div>';
-echo '<a href="../helloworld_client/client.php">example</a>';
 echo '<hr>';
 
 
 //HTTP POST Request/Response
-echo '<h1>HTTP - GET</h1>';
+echo '<h1>HTTP - POST</h1>';
 echo '<h2>Request</h2>';
 echo '<div>';
 echo '<pre>';
-echo 'http://localhost/new_soapy/helloworld_server/httpget_server.php?yourName=World!';
+echo 'http://localhost/new_soapy/helloworld_server/httppost_server.php
+
+yourName=World!';
 echo '</pre>';
 echo '</div>';
 
