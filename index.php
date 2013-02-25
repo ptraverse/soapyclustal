@@ -89,6 +89,7 @@ ob_end_clean();
 echo $contents;
 
 echo __FILE__.":".__LINE__."<br>";
+echo get_remote_ip()."<br>";
 
 if (log_ip()!=TRUE)
 {
