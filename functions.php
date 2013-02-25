@@ -1,7 +1,7 @@
 <?php
 
 
-function log_ip()
+function log_ip($file)
 {
 	$remote_ip_address="fooip";
 	$remote_ip_actual = get_remote_ip();
@@ -25,7 +25,7 @@ function log_ip()
 			`date_inserted`,
 			`ip_address`
 		) VALUES (
-			'".__FILE__."',
+			'".$file."',
 			'".date("Y-m-d H:i:s")."',
 			'".$remote_ip_address."')
 		";
