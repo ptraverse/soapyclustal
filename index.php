@@ -22,8 +22,8 @@ Hi, my name is Philippe Traverse.
 <p>My interest is in <a href="http://traversep.wordpress.com/">renewable energy</a>.</p>
 <p>My github is <a href="https://github.com/ptraverse">ptraverse</a>.</p>
 <p>My resume is not uploaded yet but will be soon...</p>
-<p><a href="grid.php">grid</a></p>
-<p><a href="spec_template.php">spec template</a></p>
+<p><a href="./grid.php">grid</a></p>
+<p><a href="./spec_template.php">spec template</a></p>
 <hr>
 <p><a href="/new_soapy/helloworld_client/client.php">helloworld soap</a></p>
 <?php
