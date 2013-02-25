@@ -6,7 +6,6 @@ function log_ip($file)
 	$remote_ip_address="fooip";
 	$remote_ip_actual = get_remote_ip();
 	
-	echo '<br>'.__FILE__.__LINE__.'<br>';
 	if (empty($remote_ip_actual))
 	{
 		$remote_ip_address = "fooerr";
@@ -105,6 +104,30 @@ function get_remote_ip()
 	// done!
 	return $ip;
 
+}
+
+function check_ip_log($ip_address,$file)
+{
+	$mysqli = new mysqli("localhost", "", "", "test");
+
+	$check_sql = "
+		SELECT
+			`date_inserted` AS `last_visit`
+		FROM `ip_log`
+		WHERE `ip_address` = '".$ip_address."'
+			AND `file` = '".$file."'
+		ORDER BY `date_inserted` DESC 
+		LIMIT 2
+		";
+	
+	$check_res = $mysqli->query($check_sql);
+	
+	while ($row = $check_res->fetch_assoc())
+	{
+		$data = $row;
+	}	
+	
+	return $data;
 }
 
 ?>

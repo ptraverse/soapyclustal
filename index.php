@@ -83,19 +83,26 @@ echo 'wsdbfetch_web_php_soap Databases Available';
 echo '</h2>';
 echo '</a>';
 
-
-$contents = ob_get_contents();
-ob_end_clean();
-echo $contents;
-
-echo __FILE__.":".__LINE__."<br>";
-echo get_remote_ip()."<br>";
+echo '<hr>';
 
 if (log_ip(__FILE__)!=TRUE)
 {
 	echo '<pre>log_ip() error!</pre>';
 }
 
+$previous_records = check_ip_log(get_remote_ip(),__FILE__);
+if (empty($previous_records))
+{
+	echo 'Welcome newcomer<br>';
+}
+else
+{
+	echo 'Welcome back - your last visit was '.$previous_records['last_visit'].'<br>';
+}
+
+$contents = ob_get_contents();
+ob_end_clean();
+echo $contents;
 
 ?>
 

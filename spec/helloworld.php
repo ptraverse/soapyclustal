@@ -24,7 +24,7 @@ echo '<hr>';
 
 //SOAP
 echo "<h1>SOAP Client</h1>";
-echo '<div>';
+echo '<div class="code">';
 echo '<pre>';
 echo '
 $sClient = new SoapClient("http://localhost/new_soapy/helloworld_server/hello.xml");
