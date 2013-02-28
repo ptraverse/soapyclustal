@@ -52,32 +52,32 @@ echo '<p>This page makes calls to the soap server below and displays the result 
 
 echo '<p>The following pages all demonstrate usage of the EMBL-EMI Soap Services linked to ClustalW.</p>';
 
-echo '<a href="/needleman-wunsch/iprscan_web_php_soap.php">';
+echo '<a href="./needleman-wunsch/iprscan_web_php_soap.php">';
 echo '<h2>';
 echo 'iprscan_web_php_soap.php';
 echo '</h2>';
 echo '</a>';
 
-echo '<a href="/needleman-wunsch/ncbiblast_web_php_soap.php">';
+echo '<a href="./needleman-wunsch/ncbiblast_web_php_soap.php">';
 echo '<h2>';
 echo 'ncbiblast_web_php_soap.php';
 echo '</h2>';
 echo '</a>';
 
-echo '<a href="/needleman-wunsch/wsdbfetch_web_php_soap.php">';
+echo '<a href="./needleman-wunsch/wsdbfetch_web_php_soap.php">';
 echo '<h2>';
 echo 'wsdbfetch_web_php_soap.php';
 echo '</h2>';
 echo '</a>';
 
-echo '<a href="/needleman-wunsch/wsdbfetch_web_php_soap.php?database=uniprotkb&id=INSR_HUMAN&format=fasta&style=default">';
+echo '<a href="./needleman-wunsch/wsdbfetch_web_php_soap.php?database=uniprotkb&id=INSR_HUMAN&format=fasta&style=default">';
 echo '<h2>';
 echo 'wsdbfetch_web_php_soap Example';
 echo '</h2>';
 echo '</a>';
 
 
-echo '<a href="/needleman-wunsch/wsdbfetch_web_php_soap.php?info=database">';
+echo '<a href="./needleman-wunsch/wsdbfetch_web_php_soap.php?info=database">';
 echo '<h2>';
 echo 'wsdbfetch_web_php_soap Databases Available';
 echo '</h2>';
