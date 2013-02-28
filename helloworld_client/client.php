@@ -1,9 +1,31 @@
 <?php
+
+/*
+ * BEGIN STANDARD STUFF
+*/
+
+echo '<html>';
+echo '<head>';
+echo '<title>Example of helloworld</title>';
+echo '<link href="../gui/base.css" rel="stylesheet">';
+echo '</head>';
+echo '<body>';
+
+/*
+ * END STANDARD STUFF
+*/
+
 try{
   $sClient = new SoapClient("http://localhost/new_soapy/helloworld_server/hello.xml");
   
+  //Title
+  echo '<div id="title"><h1>Hello, World!';
+  echo '</h1>';
+  echo '<sub><a href="../spec/helloworld.php">Spec</a></sub>';
+  echo '</div>';
+  echo '<hr>';
   
-  
+  //Body
   echo "<h1>Input</h1>";
   
   if (empty($_GET['yourName']))
@@ -14,6 +36,8 @@ try{
   {
   		$params = $_GET['yourName'];
   }
+  print_r($sClient->__getFunctions());
+  print_r($sClient->__getTypes());
   $response = $sClient->doHello($params);
   
   echo '<form action="client.php">';

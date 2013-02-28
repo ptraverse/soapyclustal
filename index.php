@@ -25,14 +25,14 @@ Hi, my name is Philippe Traverse.
 <p><a href="./grid.php">grid</a></p>
 <p><a href="./spec_template.php">spec template</a></p>
 <hr>
-<p><a href="/new_soapy/helloworld_client/client.php">helloworld soap</a></p>
+<p><a href="./helloworld_client/client.php">helloworld soap</a></p>
 <?php
 
 require_once('functions.php');
 //echo "helloworld in PHP!";
 ob_start();
 
-echo '<a href="/needleman-wunsch/example.php">';
+echo '<a href="./needleman-wunsch/example.php">';
 echo '<h2>';
 echo 'NW';
 echo '</h2>';
@@ -41,7 +41,7 @@ echo '<p>This page is a demo and visualization of the Needleman Wunsch algorithm
 
 echo '<hr>';
 
-echo '<a href="/needleman-wunsch/soapyclustal.php">';
+echo '<a href="./needleman-wunsch/soapyclustal.php">';
 echo '<h2>';
 echo 'soapyclustalW';
 echo '</h2>';

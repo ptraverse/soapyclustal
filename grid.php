@@ -1,29 +1,17 @@
 <?php
 
-//echo "<pre>".__FILE__.':'.__LINE__."</pre>";
 
-/*
-$get_sql = "
-	SELECT
-		".__FILE__.':'.__LINE__."
-		*
-	FROM
-		`meta`.`settings`	
-	";
-$get_res = mysql($get_sql) or die("add some error logging");
-
-while ($row = mysql_fetch_assoc($get_res))
-{
-	$data[] = $row;
-}
-*/
 $ed1 = array(
 	"Name"=>"HelloWorld",
 	"Language"=>"php",
-	"Spec"=>'<a href="./helloworld_client/client.php">Link</a>',
-	"Source"=>'<a href="./spec/helloworld.php">Link</a>');
-$ed2 = array("Name"=>"NW","Language"=>"php","Spec"=>"link","Source"=>"link");
-$ed3 = array("Name"=>"Viterbi","Language"=>"c#","Spec"=>"link","Source"=>"link");
+	"Example"=>'<a href="./helloworld_client/client.php">Link</a>',
+	"Spec"=>'<a href="./spec/helloworld.php">Link</a>');
+$ed2 = array(
+	"Name"=>"NW",
+	"Language"=>"php",
+	"Example"=>'<a href="./nw_client/client.php">Link</a>',
+	"Spec"=>'<a href="./spec/nw.php">Link</a>');
+$ed3 = array("Name"=>"Viterbi","Language"=>"c#","Example"=>"link","Spec"=>"link");
 $example_data = array($ed1, $ed2, $ed3);
 
 
