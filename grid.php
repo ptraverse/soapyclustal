@@ -11,8 +11,13 @@ $ed2 = array(
 	"Language"=>"php",
 	"Example"=>'<a href="./nw_client/client.php">Link</a>',
 	"Spec"=>'<a href="./spec/nw.php">Link</a>');
-$ed3 = array("Name"=>"Viterbi","Language"=>"c#","Example"=>"link","Spec"=>"link");
-$example_data = array($ed1, $ed2, $ed3);
+$ed3 = array(
+		"Name"=>"NW-Advanced",
+		"Language"=>"php",
+		"Example"=>'<a href="./nwa_client/client.php">Link</a>',
+		"Spec"=>'<a href="./spec/nwa.php">Link</a>');
+$ed4 = array("Name"=>"Viterbi","Language"=>"c#","Example"=>"link","Spec"=>"link");
+$example_data = array($ed1, $ed2, $ed3,$ed4);
 
 
 

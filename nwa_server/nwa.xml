@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<definitions name="NW" targetNamespace="urn:NW" xmlns:tns="urn:NW"  xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:N">
+      <xsd:element name="getSequenceA" type="xsd:string" />
+      <xsd:element name="getSequenceB" type="xsd:string" />
+	  <xsd:element name="NResponse" type="xsd:string" />	 	  
+	</xsd:schema>			
+  </types>
+  
+  <message name="global_alignment">
+    <part name="sequence_a" type="tns:getSequenceA" />
+    <part name="sequence_b" type="tns:getSequenceB" />
+  </message>
+  
+  <message name="global_alignmentResponse">
+    <part name="return" type="tns:NResponse" />
+  </message>
+  
+  <message name="example">
+    <part name="sequence_a" type="tns:getSequenceA" />
+    <part name="sequence_b" type="tns:getSequenceB" />
+  </message>
+  
+  <message name="exampleResponse">
+    <part name="return" type="tns:NResponse" />
+  </message>  
+  
+  <portType name="NPort">
+    <operation name="global_alignment">
+	  <input message="tns:global_alignment" />
+	  <output message="tns:global_alignmentResponse" />
+	</operation>
+	<operation name="example">
+	  <input message="tns:example" />
+	  <output message="tns:exampleResponse" />
+	</operation>
+  </portType>
+  
+  <binding name="NBinding" type="tns:NPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+	  <operation name="global_alignment">
+	    <soap:operation soapAction="urn:NAction" />
+		<input>
+		  <soap:body use="encoded" namespace="urn:N" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />		  
+		</input>
+		<output>
+		  <soap:body use="encoded" namespace="urn:N" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />		  
+		</output>
+	  </operation>
+	  <operation name="example">
+	    <soap:operation soapAction="urn:NAction" />
+		<input>
+		  <soap:body use="encoded" namespace="urn:N" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />		  
+		</input>
+		<output>
+		  <soap:body use="encoded" namespace="urn:N" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />		  
+		</output>
+	  </operation>
+  </binding>
+  
+  <service name="NService">
+    <port name="NPort" binding="tns:NBinding">
+	  <soap:address location="http://localhost/new_soapy/nwa_server/server.php" />
+	</port>
+  </service>
+    
+</definitions>
